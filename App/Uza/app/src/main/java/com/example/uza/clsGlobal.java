@@ -5,7 +5,7 @@ public class clsGlobal {
 //    public static String hostname               = "/uza";
 
     public static String protocol               = "http://";
-    public static String hostname               = "192.168.43.187/uza";
+    public static String hostname               = "192.168.43.187/uza/php";
 
     //10.0.2.2
 
