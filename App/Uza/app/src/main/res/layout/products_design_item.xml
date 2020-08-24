@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:layout_margin="5dp"
+        android:fitsSystemWindows="true"
+        android:id="@+id/products_cardview"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:fitsSystemWindows="true"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/product_image"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:scaleType="center"
+                android:src="@drawable/ic_shopping_cart_black_24dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seller Name"
+                android:visibility="gone"
+                android:fitsSystemWindows="true"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@id/product_image"
+                android:id="@+id/product_seller_name"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:fitsSystemWindows="true"
+                android:id="@+id/separation_line"
+                android:layout_below="@+id/product_seller_name"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:lines="2"
+                android:maxLines="2"
+                android:textColor="#000"
+                android:layout_marginTop="5dp"
+                android:fitsSystemWindows="true"
+                android:id="@+id/product_name"
+                android:textStyle="bold"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_below="@+id/separation_line"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_price"
+                android:fitsSystemWindows="true"
+                android:layout_below="@+id/product_name"
+                android:text="Kshs 7,499"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:fitsSystemWindows="true"
+                android:layout_marginTop="5dp"
+                android:id="@+id/product_price_strikethrough"
+                android:textSize="10sp"
+                android:layout_below="@+id/product_price"
+                android:text="Kshs 15,999"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/product_price_strikethrough"
+                android:layout_alignStart="@id/product_price_strikethrough"
+                android:layout_alignEnd="@id/product_price_strikethrough"
+                android:layout_marginTop="-8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/product_percent_reduction"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="17dp"
+                android:background="#959AB8"
+                android:fitsSystemWindows="true"
+                android:textSize="11sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:text="20%"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rating_layout"
+                android:fitsSystemWindows="true"
+                android:layout_below="@+id/product_price"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:tint="#FFEB3B"
+                    android:fitsSystemWindows="true"
+                    android:visibility="gone"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/star_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:fitsSystemWindows="true"
+                    android:text="Rating: "
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:visibility="gone"
+                    android:id="@+id/product_rating"
+                    android:text="1.1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/rating_layout"
+                android:fitsSystemWindows="true"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:fitsSystemWindows="true"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    android:src="@drawable/logo"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:id="@+id/product_category"
+                    android:fitsSystemWindows="true"
+                    android:visibility="gone"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:text="Product Category"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="product_id"
+                android:id="@+id/product_id"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

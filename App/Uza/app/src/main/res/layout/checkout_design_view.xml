@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_margin="7dp"
+        android:fitsSystemWindows="true"
+        app:cardBackgroundColor="#FFF"
+        app:cardCornerRadius="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:fitsSystemWindows="true"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/checkout_item"
+                android:fitsSystemWindows="true"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/item_title"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:fitsSystemWindows="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignEnd="@+id/checkout_item_name"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:text="ITEM" />
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cart Item Name"
+                    android:layout_marginStart="10dp"
+                    android:fitsSystemWindows="true"
+                    android:layout_below="@+id/item_title"
+                    android:id="@+id/checkout_item_name"
+                    android:textColor="#000"
+                    style="@style/TextAppearance.AppCompat.Medium"/>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkout_item_category"
+                    android:text="Item category"
+                    android:layout_below="@+id/checkout_item_name"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@id/checkout_item"
+                android:id="@+id/checkout_quantities"
+                android:fitsSystemWindows="true"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:fitsSystemWindows="true"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="top"
+                    android:id="@+id/quantity_title"
+                    android:text="UNIT PRICE"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kshs 900"
+                    android:layout_alignEnd="@+id/quantity_title"
+                    android:layout_alignParentStart="true"
+                    android:fitsSystemWindows="true"
+                    android:gravity="center"
+                    android:id="@+id/checkout_item_price"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#000"
+                    android:layout_below="@+id/quantity_title"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignEnd="@+id/quantity_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/checkout_item_quantity"
+                    android:text="Units: 10"
+                    android:layout_below="@+id/checkout_item_price"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:layout_toEndOf="@+id/checkout_quantities">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:id="@+id/subtotal_title"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:text="TOTAL"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/subtotal_title"
+                    android:layout_alignEnd="@+id/subtotal_title"
+                    android:layout_alignParentStart="true"
+                    android:fitsSystemWindows="true"
+                    android:gravity="center"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"
+                    android:text="Kshs 100000"
+                    android:id="@+id/checkout_subtotal"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

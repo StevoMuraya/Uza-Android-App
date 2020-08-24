@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:src="@drawable/ic_person_black_24dp"
+        android:padding="10dp"
+        android:id="@+id/settings_text_image"
+        android:layout_height="60dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tv_settings_text"
+        android:text="Setting Name"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_centerVertical="true"
+        android:padding="15dp"
+        android:layout_toRightOf="@+id/settings_text_image"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

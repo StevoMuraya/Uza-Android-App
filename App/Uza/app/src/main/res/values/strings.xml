@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Uza</string>
+    <string name="title_activity_uza_home_page">ActivityUzaHomePage</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string name="sell_welcome">Welcome to Uza App <b>sell products</b> section,\n we provide you with
+    an easy way of marketing your products, produces and services in an easy and convenient way.\n\n
+        By clicking on the <b>START</b> button below, it means you agree with our selling Terms and Conditions
+    indicated in our policies documentation</string>
+
+    <string name="mpesa_payment">
+        <b>Step 1: </b>\nOpen Mpesa Menu and select Lipa na M-PESA option\n \n
+        <b>Step 2: </b>\nSelect <b>Pay Bill</b> option and enter <b>1234 1234</b> as the business no.\n \n
+        <b>Step 3: </b>\nUse your mobile number as the <b>Account no</b> in the format <b>07XXXXXXXX</b>\n \n
+        <b>Step 4: </b>\nEnter the amount as indicated above\n \n
+        <b>Step 5: </b>\nEnter your pin number and complete the M-PESA transaction\n \n
+    </string>
+
+
+    <string name="mpesa_code">
+        **After your Mpesa transaction is successful, Please enter the MPESA Verification code
+            in the space provided below for verification of the payment made and completion of your purchase**
+    </string>
+
+
+    <string name="order_received">
+      Your order has been successfully received on our end and our team is working to ensure your
+        product(s) are delivered to a pick-up station in your area. Please Be patient as our team will contact you once your order has arrived in your locality.
+    </string>
+
+    <string name="testing_description">Welcome to Uza App <b>sell products</b> section,\n we provide you with
+    an easy way of marketing your products, produces and services in an easy and convenient way.\n\n
+        By clicking on the <b>START</b> button below, it means you agree with our selling Terms and Conditions
+    indicated in our policies documentation Welcome to Uza App <b>sell products</b> section,\n we provide you with
+    an easy way of marketing your products, produces and services in an easy and convenient way.\n\n
+        By clicking on the <b>START</b> button below, it means you agree with our selling Terms and Conditions
+    indicated in our policies documentation </string>
+</resources>

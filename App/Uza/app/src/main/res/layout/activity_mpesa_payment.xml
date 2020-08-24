@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MpesaPaymentActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="You selected payment through\nMobile M-pesa"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Follow the following instructions to complete your purchase process" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/mpesa_logo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amount Required"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kshs 3,000"
+                android:id="@+id/total_amount_mpesa"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:elevation="7dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginStart="30dp"
+                app:cardBackgroundColor="#dedede">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:padding="15dp"
+                        android:background="#dedede"
+                        android:text="@string/mpesa_payment"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:gravity="center"
+                        android:textStyle="italic"
+                        android:padding="15dp"
+                        android:background="#dedede"
+                        android:text="@string/mpesa_code"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="11dp"
+                android:layout_marginTop="80dp"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:padding="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFF"
+                        android:maxLines="1"
+                        android:maxLength="10"
+                        android:inputType="textCapCharacters"
+                        android:textColor="#000"
+                        android:id="@+id/mpesa_payment_code"
+                        android:paddingLeft="20dp"
+                        android:hint="M-PESA CODE"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:text="submit"
+                android:visibility="visible"
+                android:id="@+id/mpesa_submit"
+                android:textColor="#fff"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"/>
+
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/mpesa_loading"
+                android:visibility="gone"
+                android:layout_marginBottom="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mpesa_loading_screen"
+        android:alpha="0"
+        android:visibility="gone"
+        android:background="#000"/>
+</RelativeLayout>
