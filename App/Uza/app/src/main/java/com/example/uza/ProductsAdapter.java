@@ -51,7 +51,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
         holder.category.setText(products.getCategory());
 
         Picasso.get()
-                    .load(products.getProduct_image())
+                .load(products.getProduct_image())
                 .resize(180,180)
                 .centerInside()
                 .error(R.drawable.ic_shopping_cart_black_24dp)

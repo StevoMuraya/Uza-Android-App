@@ -67,7 +67,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     @Override
     public void onBindViewHolder(final CartAdapter.CartViewHolder holder, int position) {
         final Cart cart = cartList.get(position);
-
         product_name.setText(cart.getProduct_name());
         price.setText("Kshs " + cart.getPrice());
         percentage_strike.setText(cart.getPercentage_strike() + "%");
@@ -75,12 +74,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         cart_quantity.setText(cart.getQuantity());
 
         Picasso.get()
-                .invalidate(clsGlobal.protocol + clsGlobal.hostname + "/images/product_images/"+cart.getProduct_image());
-        Picasso.get()
-                .load(clsGlobal.protocol + clsGlobal.hostname + "/images/product_images/"+cart.getProduct_image())
+                .load(cart.getProduct_image())
                 .resize(180,180)
                 .centerInside()
-                .networkPolicy(NetworkPolicy.NO_CACHE)
                 .error(R.drawable.ic_shopping_cart_black_24dp)
                 .into(product_image, new com.squareup.picasso.Callback() {
                     @Override
