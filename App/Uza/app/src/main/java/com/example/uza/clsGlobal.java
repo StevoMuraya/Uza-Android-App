@@ -1,11 +1,11 @@
 package com.example.uza;
 
 public class clsGlobal {
-//    public static String protocol               = "http://eaglefrontiersfashion.co.ke";
-//    public static String hostname               = "/uza";
+    public static String protocol               = "http://eaglefrontiersfashion.co.ke";
+    public static String hostname               = "/uza";
 
-    public static String protocol               = "http://";
-    public static String hostname               = "192.168.43.187/uza/php";
+//    public static String protocol               = "http://";
+//    public static String hostname               = "192.168.43.187/uza/php";
 
     //10.0.2.2
 
